@@ -1,0 +1,26 @@
+# nginx.replicaset.yml
+---
+apiVersion: apps/v1
+kind: ReplicaSet
+metadata:
+  name: nginx-rs
+spec:
+  replicas: 3
+  selectors:
+    matchExpressions: "-{key:tier,operator:In,values:[frontend]}"
+    matchlabels:
+      app: nginx-app
+  template:
+    metadata:
+      labels:
+        app: nginx-app
+        tier: frontend
+      name: nginx-pod
+      spec:
+        containers:
+          -
+            image: nginx
+            name: nginx-container
+            ports:
+              -
+                containerPort: 80
