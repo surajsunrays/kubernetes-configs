@@ -1,12 +1,12 @@
 ## Step by Step instructions to create and use dynamic volume in kubernetes
 ##### 1. Step 1. <br>
 Create Strorage class for storage type that we are using, like <br>
-<| Strorage type | StorageClass |
-| :------------- | :------------- |
-| SSD            | fast           |
-| HDD            | slow           |
-| ------         | distributed    |
-| :------------- | :------------- |
+<| Strorage type | StorageClass |<br>
+| :------------- | :------------- |<br>
+| SSD            | fast           |<br>
+| HDD            | slow           |<br>
+| ------         | distributed    |<br>
+| :------------- | :------------- |<br>
 <br>
 example filename: sc.yaml<br>
 ###### Apply the configuration .....
