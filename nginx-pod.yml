@@ -1,13 +1,14 @@
 # nginx-pod.yml
----
+--- 
 apiVersion: v1
 kind: Pod
-metadata:
-  name: nginx-pod
-  labels:
+metadata: 
+  labels: 
     app: nginx
     tier: dev
-  spec:
-    containers:
-      - name: nginx-container
-        image: nginx
+  name: nginx-pod
+spec: 
+  containers: 
+    - 
+      image: nginx
+      name: nginx-container
