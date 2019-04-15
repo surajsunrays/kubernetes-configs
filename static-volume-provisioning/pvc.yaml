@@ -1,0 +1,13 @@
+# 2. Create PersistentVolumeClaim
+# pvc.yaml
+apiVersion: v1
+kind: PersistentVolumeClaim
+metadata:
+  name: my-disk-claim
+spec:
+  resources:
+    requests:
+      storage: 5Gi
+  accessModes:
+    - ReadWriteOnce
+  storageClassName: slow

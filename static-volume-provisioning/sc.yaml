@@ -1,0 +1,15 @@
+# 1. Creating StorageClass
+# sc.yaml
+apiVersion: v1
+kind: PersistentVolume
+metadata:
+  name: pv-gce
+spec:
+  capacity:
+    storage: 5Gi
+  accessModes:
+    - ReadWriteOnce
+  storageClassName: slow
+  gcePersistentDisk:
+    pdname: my-data-disk
+    fsType: ext4
